@@ -1,36 +1,79 @@
 .App {
-  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.NavBox {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: black;
+  height: 6vh;
+}
+
+.LinkToHome {
+  font-family: "Noticia Text", serif;
+  color: white;
+  margin: 0 auto;
+  
+}
+
+.Header {
+  display: flex;
+  position: relative;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: #61dafb;
+.HeaderImage {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  width: 90%;
+  height: 500px;
+  border-radius: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BodyHeader {
+  font-family: "Noticia Text", serif;
+  position: relative;
+  top: 580px;
+}
+
+.Body {
+  display: grid;
+  position: relative;
+  top: 30px;
+  padding-left: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 5em;
+}
+
+.Images {
+  border: 3px solid black;
+}
+
+.SearchBar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 550px;
+  height: 40px;
+}
+
+.Search {
+  width: 300px;
+}
+
+.FooterBox {
+  position: fixed;
+  bottom: 0;
+  height: 3vh;
+  width: 100%;
+  border-top: 2px solid white;
+  background-color: black;
+  text-align: end;
 }

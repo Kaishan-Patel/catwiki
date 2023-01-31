@@ -1,22 +1,27 @@
 import React from "react";
-import logo from "./logo.svg";
+import { Box } from '@mui/material';
 import "./App.css";
 
-function App() {
-  const [data, setData] = React.useState(null);
+// import Components
+import Header from './components/Header';
+import SearchBar from './components/Search';
+import Body from './components/Body';
+import Footer from './components/Footer';
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
+      <Box className="NavBox">
+        <div className="LinkToHome">
+          <h1>CatWiki</h1>
+        </div>
+      </Box>
+      <Header />
+      <SearchBar />
+      <Body />
+      <Box className="FooterBox">
+        <Footer />
+      </Box>
     </div>
   );
 }
