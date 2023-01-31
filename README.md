@@ -81,3 +81,22 @@ You'll then be able to access your app at
 git remote add origin git@github.com:${your-github-username}/catwiki.git
 git push origin master
 ```
+
+## What have I added?
+
+Firstly, I have added a simple layout using Material UI. It is really useful to structure the application the way you want to.
+I have created three new endpoints:
+    /api - gets a multiple images to display on the homepage
+    /api/:id - gets a single image to display on the homepage
+    /api/breeds/:breed_id - get an image for a certain breed
+
+There is a list of breed Ids to choose from - https://api.thecatapi.com/v1/breeds
+To Search for a certain breeds image, insert the ID in the text field and select search.
+
+## What would i change?
+
+I wanted to add React-Router-DOM to the dependencies and allow users to click onto the images which will navigate them onto another page with more details on that cat.
+
+Instead of breed ID, i should have had a dropdown to avoid confusion. That will allow users to not make a mistake.
+
+For the layout, i wanted to make the homepage as simple as possible.
