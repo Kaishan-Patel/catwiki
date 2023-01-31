@@ -37,7 +37,7 @@ const SearchBar = () => {
     };
 
     const getBreed = async () => {
-        const response = await fetch(`https://63d986dffa70b2008cecc180--unrivaled-snickerdoodle-869fcf.netlify.app/api/breed/${searchInput}`)
+        const response = await fetch(`/api/breed/${searchInput}`)
         const results = await response.json()
         setData(results[0].url)
         setOpen(true)
