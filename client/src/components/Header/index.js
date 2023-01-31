@@ -6,7 +6,7 @@ const Header = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch(`/api/2ik`);
+            const response = await fetch(`https://63d986dffa70b2008cecc180--unrivaled-snickerdoodle-869fcf.netlify.app/api/2ik`);
             const result = await response.json();
             setData(result.url);
         }

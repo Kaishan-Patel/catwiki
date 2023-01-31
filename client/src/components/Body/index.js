@@ -5,7 +5,7 @@ const Body = () => {
 
     useEffect(() => {
         const getMultipleCats = async () => {
-            fetch(`/api`)
+            fetch(`https://63d986dffa70b2008cecc180--unrivaled-snickerdoodle-869fcf.netlify.app/api`)
                 .then((response) => response.json())
                 .then((data) => setData(data));
         };

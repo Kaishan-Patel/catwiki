@@ -1,7 +1,6 @@
 const path = require("path");
 const express = require("express");
 const { getCat, getCats, getBreed } = require("./controllers/cat");
-const { response } = require("express");
 
 const PORT = process.env.PORT || 3001;
 
