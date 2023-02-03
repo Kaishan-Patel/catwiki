@@ -6,7 +6,7 @@ const Header = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch(`/api/2ik`);
+            const response = await fetch('/api/2ik');
             const result = await response.json();
             setData(result.url);
         }

@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const { getCat, getCats, getBreed } = require("./controllers/cat");
+const { getCat, getCats, getAllBreeds, getBreed } = require("./controllers/cat");
 
 const PORT = process.env.PORT || 3001;
 
@@ -19,10 +19,19 @@ app.get("/api", (req, res) => {
     });
 });
 
-app.get("/api/:id", (req, res) => {
-  const id = req.params.id;
+app.get("/api/breeds", (req, res) => {
+  getAllBreeds()
+    .then((response) => {
+      res.json(response);
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    })
+})
 
-  getCat(id)
+app.get("/api/breed/:breed_id", (req, res) => {
+  const breedId = req.params.breed_id;
+  getBreed(breedId)
     .then((response) => {
       res.json(response);
     })
@@ -31,9 +40,10 @@ app.get("/api/:id", (req, res) => {
     });
 });
 
-app.get("/api/breed/:breed_id", (req, res) => {
-  const breedId = req.params.breed_id;
-  getBreed(breedId)
+app.get("/api/:id", (req, res) => {
+  const id = req.params.id;
+
+  getCat(id)
     .then((response) => {
       res.json(response);
     })

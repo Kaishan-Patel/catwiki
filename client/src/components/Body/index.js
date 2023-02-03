@@ -4,13 +4,13 @@ const Body = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
-        const getMultipleCats = async () => {
-            fetch(`/api`)
-                .then((response) => response.json())
-                .then((data) => setData(data));
-        };
+        async function fetchData() {
+            const response = await fetch('/api');
+            const results = await response.json();
+            setData(results);
+        }
 
-        getMultipleCats();
+        fetchData();
     }, []);
     
     return (
