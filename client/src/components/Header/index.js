@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <div className="Header">
             {data ? (
-                <img className="HeaderImage" src={data} alt="Cat" />
+                <img className="HeaderImage" src={data} alt="cat" />
             ) : (
                 <img className="HeaderImage" src={logo} alt="logo" />
             )}

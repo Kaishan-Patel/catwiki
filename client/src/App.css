@@ -10,7 +10,6 @@
 .NavBox {
   display: flex;
   background-color: black;
-  height: 6vh;
 }
 
 .LinkToHome {
@@ -33,14 +32,14 @@
   align-items: center;
   padding: 20px 40px;
   width: 90%;
-  height: 500px;
+  height: 300px;
   border-radius: 100px;
 }
 
 .BodyHeader {
   font-family: "Noticia Text", serif;
   position: relative;
-  top: 580px;
+  top: 360px;
 }
 
 .Body {
@@ -49,7 +48,7 @@
   top: 30px;
   padding-left: 20px;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 5em;
+  height: 450px;
 }
 
 .Images {
@@ -60,7 +59,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  top: 550px;
+  top: 350px;
   height: 40px;
 }
 
@@ -71,7 +70,6 @@
 .FooterBox {
   position: fixed;
   bottom: 0;
-  height: 3vh;
   width: 100%;
   border-top: 2px solid white;
   background-color: black;

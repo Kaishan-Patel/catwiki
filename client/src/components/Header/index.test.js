@@ -18,6 +18,7 @@ test('api to be called once', async () => {
     const mockedFetch = jest.fn().mockResolvedValueOnce(mRes);
     global.fetch = mockedFetch;
     render(<Header/>);
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async ()=>{
         await waitFor(() => expect(mockedFetch).toHaveBeenCalledTimes(1))
     })
@@ -30,10 +31,11 @@ test('displays cat image after loading image', async () => {
     const mockedFetch = jest.fn().mockResolvedValueOnce(mRes);
     global.fetch = mockedFetch;
     render(<Header/>);
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async ()=>{
         await waitFor(() => expect(mockedFetch).toHaveBeenCalledTimes(1))
     })
     const headerImage = screen.getByRole('img');
     expect(headerImage).toHaveAttribute('src', 'https://cdn2.thecatapi.com/images/2ik.jpg');
-    expect(headerImage).toHaveAttribute('alt', 'Cat');
+    expect(headerImage).toHaveAttribute('alt', 'cat');
 })
