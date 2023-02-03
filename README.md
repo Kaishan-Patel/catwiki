@@ -88,15 +88,13 @@ Firstly, I have added a simple layout using Material UI. It is really useful to 
 I have created three new endpoints:
     /api - gets a multiple images to display on the homepage
     /api/:id - gets a single image to display on the homepage
+    /api/breeds - get all breeds
     /api/breeds/:breed_id - get an image for a certain breed
 
-There is a list of breed Ids to choose from - https://api.thecatapi.com/v1/breeds
-To Search for a certain breeds image, insert the ID in the text field and select search.
+Select from the dropdown list to see the different breed of cats
 
 ## What would i change?
 
 I wanted to add React-Router-DOM to the dependencies and allow users to click onto the images which will navigate them onto another page with more details on that cat.
-
-Instead of breed ID, i should have had a dropdown to avoid confusion. That will allow users to not make a mistake.
 
 For the layout, i wanted to make the homepage as simple as possible.
